@@ -1,0 +1,16 @@
+'use strict';
+let fullName = 'Tev Nicolas';
+let isCool = true;
+let totalPets = 3;
+console.log('Full Name: ', fullName);
+console.log('Cool: ', isCool);
+console.log('Total # of Pets: ', totalPets);
+console.log('typeof fullName: ', typeof fullName);
+console.log('typeof isCool: ', typeof isCool);
+console.log('typeof totalPets: ', typeof totalPets);
+let unknown = null;
+console.log('unknown: ', unknown);
+console.log('typeof unknown: ', typeof unknown);
+let never;
+console.log('never: ', never);
+console.log('typeof never: ', typeof never);
