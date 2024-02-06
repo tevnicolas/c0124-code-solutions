@@ -5,12 +5,16 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What are the names of the individual pieces of a CSS rule?
+  Selector, Declaration Block/Declaration, Property, Value
 
 - In CSS, how do you select elements by their `class` attribute?
+  By using '.' then the class name. .xx
 
 - In CSS, how do you select elements by their tag name?
+  By just writing the tag name ie article {
 
 - In CSS, how do you select an element by its `id` attribute?
+  Using the hash '#' followed by the id value.
 
 ## Notes
 
