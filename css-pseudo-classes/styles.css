@@ -1,0 +1,21 @@
+button {
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
+
+.body:nth-child(odd) {
+  background-color: rgb(197, 195, 195);
+}
