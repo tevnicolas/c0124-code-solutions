@@ -1,0 +1,15 @@
+'use strict';
+console.log('hello, world');
+let h1element = document.querySelector('h1');
+console.log(h1element);
+console.dir(h1element);
+let explanation = document.querySelector('#explanation');
+console.log(explanation);
+console.dir(explanation);
+let hint = document.querySelector('.hint');
+console.log(hint);
+console.dir(hint);
+let p = document.querySelectorAll('p');
+console.log(p);
+let example = document.querySelectorAll('.example-link');
+console.log(example);
