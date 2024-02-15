@@ -1,0 +1,34 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  color: black;
+  font-size: 3vh;
+  min-width: 50vw;
+}
+
+.underlined {
+  border-bottom: 3px solid;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+  border-bottom: 3px solid;
+  border-color: red;
+}
+
+span {
+  vertical-align: bottom;
+  display: inline-block;
+  text-align: center;
+  width: 2vh;
+  height: 5vh;
+}
