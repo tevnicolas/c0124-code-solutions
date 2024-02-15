@@ -1,0 +1,36 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+}
+
+#circle {
+  width: 20vh;
+  height: 20vh;
+  border-radius: 200px;
+}
+
+.light {
+  background-color: rgb(250 234 152);
+  box-shadow: 0 0 2vh 2vh rgb(241, 210, 116);
+}
+
+.dark {
+  background-color: grey;
+  box-shadow: 0 0 2vh 2vh rgb(225, 220, 220);
+}
