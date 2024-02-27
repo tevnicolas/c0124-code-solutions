@@ -1,0 +1,25 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  margin-top: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.column-one-third {
+  padding-top: 10px;
+  flex-basis: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  background-size: cover;
+  border: 1px solid;
+}
