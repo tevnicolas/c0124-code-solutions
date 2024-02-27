@@ -39,7 +39,6 @@ function carouselLogic(): void {
     counter = 0;
     toggleCircles();
     $image.setAttribute('src', imageNumber[counter]);
-    counter = 1;
   }
 }
 
