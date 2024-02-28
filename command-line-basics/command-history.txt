@@ -1,0 +1,487 @@
+   79          }
+   80        }
+   81      }
+   82      return undefined;
+   83    }
+   84    /** Removes a key-value pair. */
+   85    remove(key: string): void {
+   86      const index = this.hash(key, this.limit);
+   87      if (this.storage[index]) {
+   88        if (         this.storage[index].length === 1 &&         this.storage[index][0][0] === key;       ) {
+   89          delete this.storage[index];
+   90        } else {
+   91          for (let i = 0; i < this.storage[index].length; i++) {
+   92            if (this.storage[index][i][0] === key) {
+   93              delete this.storage[index][i];
+   94            }
+   95          }
+   96        }
+   97      }
+   98    }
+   99    /** Check if a key exists. */
+  100    has(key: string): boolean {
+  101      const index = this.hash(key, this.limit);
+  102      if (this.storage[index]) {
+  103        for (let i = 0; i < this.storage[index].length; i++) {
+  104          if (this.storage[index][i][0] === key) {
+  105            return true;
+  106          }
+  107        }
+  108      }
+  109      return false;
+  110    }
+  111    /** Print all keys/values. */
+  112    printTable(): void {
+  113      for (let i = 0; i < this.storage.length; i++) {
+  114        if (this.storage[i] !== undefined) {
+  115          console.log(`Bucket ${i}: ${JSON.stringify(this.storage[i])}`);
+  116        } else {
+  117          console.log(`Bucket ${i} Empty`);
+  118        }
+  119      }
+  120    }
+  121    /** Clear all key/values. */
+  122    clear(): void {
+  123      thi
+  124  git add practice-exercises
+  125  git status
+  126  git commit -m "In progress practice-exercises ."
+  127  git push origin practice-exercises
+  128  git switch typescript-local-storage
+  129  git switch practice-exercises
+  130  cd practice-exercises
+  131  npm install
+  132  git add practice-exercises
+  133  git status
+  134  git commit -m "In progress practice-exercises ."
+  135  git switch main
+  136  cd ..
+  137  cd ..
+  138  git clone git@github.com:tevnicolas/code-journal.git
+  139  ls
+  140  npm install
+  141  git branch user-can-create-an-entry-1
+  142  git switch user-can-create-an-entry-1
+  143  git add .
+  144  git status
+  145  git commit -m "First two tasks regarding HTML complete #1"
+  146  git add .
+  147  git commit -m "Fitted everything inside form, styled, and then made all inputs required. #1"
+  148  npx tsc --watch
+  149  git commit -m "Added input event listener to photo url input that changes img src attribute when user pastes link. #1"
+  150  git add .
+  151  git status
+  152  git commit -m "Added
+  153   input event listener to photo url input that changes img src attribute when
+  154   user pastes link. #1"
+  155  git add .
+  156  git commit -m "Added
+  157   input event listener to photo url input that changes img src attribute when
+  158   user pastes link. #1"
+  159  git add .
+  160  git commit -m "Added
+  161   input event listener to photo url input that changes img src attribute when
+  162   user pastes link. #1"
+  163  git add .
+  164  git commit -m "Added
+  165   input event listener to photo url input that changes img src attribute when
+  166   user pastes link. #1"
+  167  git add .
+  168  git commit -m "Added
+  169   input event listener to photo url input that changes img src attribute when
+  170   user pastes link. #1"
+  171  git add .
+  172  git status
+  173  git commit -m "Added submit event listener, prevented default, created new interface for formelements, created new formelements var, stored forms input values in new object. #1"
+  174  git add .
+  175  git commit -m "Added submit event listener, prevented default, created new interface for formelements, created new formelements var, stored forms input values in new object. #1"
+  176  git push origin user-can-create-an-entry-1
+  177  git add .
+  178  git commit -m "Added submit event listener and all that goes inside it. Can't affirm that it works... Console.logs are not working atm. #1"
+  179  git add .
+  180  git commit -m "Added submit event listener and all that goes inside it. Can't affirm that it works... Console.logs are not working atm. #1"
+  181  git add .
+  182  git commit -m "Added submit event listener and all that goes inside it. Can't affirm that it works... Console.logs are not working atm. #1"
+  183  git add .
+  184  git commit -m "Added beforeunload event listener, new var previousDataJSON, and if statement checking if variable is null, wherether to parse the JSON. #1"
+  185  npx tsc --watch
+  186  git add .
+  187  git commit -m "Finished testing. #1"
+  188  git add .
+  189  git commit -m "Little fixes after testing again. #1"
+  190  git add .
+  191  git commit -m "Little Fixes alt attribute. #1"
+  192  git push origin user-can-create-an-entry-1
+  193  git add .
+  194  git commit -m "Minor changes. #1"
+  195  git push origin user-can-create-an-entry-1
+  196  git switch main
+  197  git pull origin main
+  198  git branch user-can-view-entries-2
+  199  git switch user-can-view-entries-2
+  200  git add .
+  201  status
+  202  git status
+  203  git commit -m "Added ul, dummy journal entries, checked they're responsive for mobile and desktop. #2"
+  204  git add .
+  205  git commit -m "Added ul, dummy journal entries, checked they're responsive for mobile and desktop. #2"
+  206  git push origin user-can-view-entries-2
+  207  git add .
+  208  git status
+  209  git commit -m "Defined function render creates dom try from parameter EntriesObject. #2"
+  210  git add .
+  211  git commit -m "Defined function render creates dom try from parameter EntriesObject. #2"
+  212  npx tsc --watch
+  213  git add .
+  214  git status
+  215  git commit -m "Created DOMContentLoaded event listener, callback which loops through data.entries, generates dom trees and appeneds the posts to html ul element... Also deleted dummy entries and created a 'no entries' message. #2"
+  216  npx tsc --watch
+  217  git add .
+  218  git commit -m "Defined toggleNoEntries function. I'm 70% sure this is what the directions asked for. #2"
+  219  git add .
+  220  git commit -m "Defined toggleNoEntries function. I'm 70% sure this is what the directions asked for. #2"
+  221  npx tsc --watch
+  222  git add .
+  223  git commit -m "Defined viewSwap function yada yada. #2"
+  224  git push origin user-can-view-entries-2
+  225  npx tsc --watch
+  226  git add .
+  227  git commit -m "Added an entries  achor to navbar. Still need to finish writing the event handler function which will make ut do something. Its commented out for now. #2"
+  228  git push origin user-can-view-entries-2
+  229  npx tsc --watch
+  230  git add .
+  231  git status
+  232  git commit -m "Added event listner for entries header anchor, which successfully hides entry-form. #2"
+  233  npx tsc --watch
+  234  git add .
+  235  git status
+  236  git commit -m "Added anchor new Button to show entry-form and its corresponding event handler. #2"
+  237  git push origin user-can-view-entries-2
+  238  npx tsc --watch
+  239  git add .
+  240  git commit -m "Updated submit callback, it now renders a dom tree, prepends that dom tree to the ul, viewSwaps to show entries, conditionally uses toggleEntries. #2"
+  241  npx tsc --watch
+  242  git add .
+  243  git commit -m "Updated DOMContentLoaded callback function task. Uses viewswapping and toggleEntries functions now. #2"
+  244  git push origin user-can-view-entries-2
+  245  npx tsc --watch
+  246  git add .
+  247  git commit -m "Finished tasks, finished testing. #2"
+  248  git push origin user-can-view-entries-2
+  249  git add .
+  250  git push origin user-can-view-entries-2
+  251  npx tsc --watch
+  252  git add .
+  253  git status
+  254  git commit -m "Final changes. #2"
+  255  git push origin user-can-view-entries-2
+  256  git pull origin main
+  257  git switch main
+  258  git pull origin main
+  259  git branch user-can-edit-an-entry-3
+  260  git switch user-can-edit-an-entry-3
+  261  git switch main
+  262  git pull origin main
+  263  git switch user-can-edit-an-entry-3
+  264  npx tsc --watch
+  265  git add .
+  266  git status
+  267  git commit -m "Updated render Entry by adding pencil, data-entry-id to li being returned, added event listener to ul which allows for editing mode to start, prepopulates form. #3"
+  268  npx tsc --watch
+  269  npx tsc --watch
+  270  git add .
+  271  git status
+  272  git commit -m "Added updating title edit entry, updating submit with conditional if data.editing is null or not, if it's an object it does the original functionality, if not does some things...unfinished. #3"
+  273  git push origin user-can-edit-an-entry-3
+  274  npx tsc --watch
+  275  git add .
+  276  git commit -m "Fixed last issues, finished if data.editing is not null things, created a clearForm function, added it to $entriesHeaderAnchor and $newAnchor eventlisteners, changed $ul.appendChild() to $ul.insertBefore(..,..) in $form event handler so now order is newest post first! Also cleaned up a little CSS. #3"
+  277  git push origin user-can-edit-an-entry-3
+  278  npx tsc --watch
+  279  npx tsc --watch
+  280  npx tsc --watch
+  281  git add .
+  282  git commit -m "Little change instead of insertBefore() used prepend() method. #3"
+  283  git push origin user-can-edit-an-entry-3
+  284  git switch main
+  285  git pull origin main
+  286  git branch user-can-delete-an-entry-4
+  287  git switch user-can-delete-an-entry-4
+  288  npx tsc --watch
+  289  git add .
+  290  git commit -m "Added Delete Entry button that only appears while form is accessed by editing. #4"
+  291  npx tsc --watch
+  292  git add .
+  293  git commit -m "Added dialog element, buttons inside, added event listeners to $delteEntryAnchor to click open the modal, and then I added a click eventL to $modal and event delegated to close when clicking $cancel...in progress there. #4"
+  294  npx tsc --watch
+  295  git add .
+  296  git commit -m "Added dialog element, buttons inside, added event listeners to $delteEntryAnchor to click open the modal, and then I added a click eventL to $modal and event delegated to close when clicking $cancel...in progress there. #4"
+  297  npx tsc --watch
+  298  git add .
+  299  git commit -m "Added dialog element, buttons inside, added event listeners to $delteEntryAnchor to click open the modal, and then I added a click eventL to $modal and event delegated to close when clicking $cancel...in progress there. #4"
+  300  git push origin user-can-delete-an-entry-4
+  301  npx tsc --watch
+  302  git add .
+  303  git commit -m "Finished confirm button functionality. #4"
+  304  git push origin user-can-delete-an-entry-4
+  305  npx tsc --watch
+  306  git add .
+  307  git commit -m "Rogue console.log removed. #4"
+  308  git push origin user-can-delete-an-entry-4
+  309  git switch main
+  310  git pull origin main
+  311  git switch practice-exercises
+  312  cd practice-exercises
+  313  npm test
+  314  npm test
+  315  npm test
+  316  npm test
+  317  npm test
+  318  cd ..
+  319  npm install
+  320  git status
+  321  git add practice-exercises
+  322  git status
+  323  git commit -m "In progress practice exercises."
+  324  git add practice-exercises
+  325  git commit -m "In progress practice exercises."
+  326  git add practice-exercises
+  327  git commit -m "In progress practice exercises."
+  328  git push origin practice-exercises
+  329  cd /workspaces
+  330  git clone <paste the SSH URL>
+  331  cd week-planner
+  332  npm install
+  333  cd /workspaces
+  334  git clone git@github.com:nmotamedi/week-planner.git
+  335  cd week-planner
+  336  npm install
+  337  git pull origin main
+  338  git pull origin main
+  339  npx tsc --watch
+  340  git add .
+  341  git push origin main
+  342  git add .
+  343  git commit -m "Added some javascript, added a dialog"
+  344  git commit -m "Added some javascript, added a dialog" --no-verify
+  345  git push origin main
+  346  git add .
+  347  git commit -m "Added some javascript, added a dialog" --no-verify
+  348  git push origin main
+  349  git pull origin main
+  350  git add .
+  351  git commit -m "Created render function"
+  352  git commit -m "Created render function" --no-verify
+  353  git push origin main
+  354  git pull origin main
+  355  npx tsc --watch
+  356  git add .
+  357  git commit -m "Added hidden classes to days not selected" --no-verify
+  358  git push origin main
+  359  git pull origin main
+  360  git pull origin main
+  361  npx tsc --watch
+  362  git add .
+  363  git commit -m "Added some for loops to $sortSelect listener." --no-verify
+  364  git push origin main
+  365  git pull origin main
+  366  git branch practice-interview-problem
+  367  git switch main
+  368  git branch practice-interview-problem
+  369  git branch -d practice-interview-problem
+  370  git branch -D practice-interview-problem
+  371  git branch practice-interview-problem
+  372  git switch practice-interview-problem
+  373  cd practice-interview-problem
+  374  cd practice-interview-challenge
+  375  npx tsc --watch
+  376  npx tsc --watch
+  377  cd ..
+  378  git status
+  379  git add practice-interview-challenge
+  380  git status
+  381  git commit -m "Completed practice-interview-problem."
+  382  npx tsc --watch
+  383  cd practice-interview-problem
+  384  npx tsc --watch
+  385  cd practice-interview-challenge
+  386  npx tsc --watch
+  387  cd ..
+  388  git add practice-interview-challenge
+  389  git commit -m "Completed practice-interview-problem."
+  390  git push origin main
+  391  git push origin practice-interview-problem
+  392  git add practice-interview-challenge
+  393  git commit -m "Completed practice-interview-problem."
+  394  git push origin practice-interview-problem
+  395  git branch -D practice-interview-problem
+  396  git switch main
+  397  git switch practice-interview-problem
+  398  git branch practice-interview-challenge
+  399  git switch practice-interview-challenge
+  400  git add practice-interview-challenge
+  401  git status
+  402  git commit -m  "Completed practice-interview-challenge."
+  403  git push origin practice-interview-challenge
+  404  git branch -D practice-interview-problem
+  405  git switch main
+  406  git pull origin main
+  407  git branch typescript-timers
+  408  git switch typescript-timers
+  409  cd typescript-timers
+  410  npx tsc --watch
+  411  cd ..
+  412  git add typescript-timers
+  413  git commit -m "Completed typescript-timers exercise."
+  414  git push origin typescript-timers
+  415  git switch main
+  416  git pull origin main
+  417  git pull origin main
+  418  git switch practice-exercises
+  419  git stash
+  420  git switch practice-exercises
+  421  cd practice-exercises
+  422  npm test
+  423  npx tsc --watch
+  424  cd ..
+  425  git switch main
+  426  git commit -m "Little update."
+  427  git add practice-exercises
+  428  git commit -m "Little changes"
+  429  git switch main
+  430  git pull origin main
+  431  git branch typescript-carousel
+  432  git switch typescript-carousel
+  433  cd typescript-carousel
+  434  npx tsc --watch
+  435  npx tsc --watch
+  436  cd ..
+  437  git add typescript-carousel
+  438  git status
+  439  git commit -m "Completed typescript-carousel challenge."
+  440  git push origin typescript-carousel
+  441  npx tsc --watch
+  442  cd typescript-carousel
+  443  npx tsc --watch
+  444  cd ..
+  445  git add typescript-carousel
+  446  git commit -m "Completed typescript-carousel challenge."
+  447  git push origin typescript-carousel
+  448  git switch main
+  449  git pull origin main
+  450  git branch typescript-destructuring
+  451  git switch typescript-destructuring
+  452  cd typescript-destructuring
+  453  npx tsc --watch
+  454  cd ..
+  455  git add typescript-destructuring
+  456  git status
+  457  git commit -m "Completed typescript-destructuring exercise."
+  458  git push origin typescript-destructuring
+  459  git add typescript-destructuring
+  460  git commit -m "Completed typescript-destructuring exercise."
+  461  git push origin typescript-destructuring
+  462  git switch main
+  463  git pull origin main
+  464  git pull origin main
+  465  git switch practice-exercises
+  466  cd practice-exercises
+  467  cd ..
+  468  git switch main
+  469  git add practice-exercises
+  470  git commit -m "Little update"
+  471  git switch main
+  472  git branch typescript-operators
+  473  git switch typescript-operators
+  474  cd typescript-operators
+  475  npx tsc --watch
+  476  cd ..
+  477  git add typescript-operators
+  478  git status
+  479  git commit -m "Completed typescript-operators exercise."
+  480  git push origin typescript-operators
+  481  git switch main
+  482  git branch array-methods
+  483  git switch array-methods
+  484  cd array-methods
+  485  npx tsc --watch
+  486  cd ..
+  487  cd array-methods
+  488  npx tsc --watch
+  489  cd ..
+  490  git add array-methods
+  491  git commit -m "Completed array-methods exercise."
+  492  git push origin array-methods
+  493  cd array-methods
+  494  npx tsc --watch
+  495  cd ..
+  496  git add array-methods
+  497  git commit -m "Completed array-methods exercise."
+  498  git push origin array-methods
+  499  git switch main
+  500  git pull origin main
+  501  git branch command-line-basics
+  502  git switch command-line-basics
+  503  cd command-line-basics
+  504  man man
+  505  man cat
+  506  cat laziness.txt
+  507  cat impatience.txt
+  508  cat hubris.txt
+  509  cat laziness.txt impatience.txt hubris.txt
+  510  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  511  cat three-virtues.txt
+  512  man ls
+  513  man ls
+  514  ls lfz-staff/
+  515  ls
+  516  ls -a -F
+  517  man ls
+  518  ls -F
+  519  ls lfz-staff/ -a -F
+  520  ls -aF lfz-staff > lfz-staff/contents.txt
+  521  cat lfz-staff/contents.txt
+  522  ls -aF lfz-staff
+  523  man pwd
+  524  pwd
+  525  pwd > i-was-here.txt
+  526  ls
+  527  cat i-was-here.text
+  528  cat i-was-here.txt
+  529  man echo
+  530  echo 'Hello, World!'
+  531  echo 'Hello, world!' > hello.txt
+  532  man touch
+  533  man touch
+  534  touch tag-youre-it.txt
+  535  touch > snoot/boop.txt
+  536  touch boop.txt > snoot/
+  537  touch boop.txt > snoot/boop.txt
+  538  ls snoot/
+  539  man mkdir
+  540  mkdir parent
+  541  ls parent/
+  542  ls aqua/
+  543  man mkdir
+  544  mkdir parent/child/granchild -pp
+  545  touch .gitkeep > parent/child/granchild
+  546  touch .gitkeep > parent/child/granchild/.gitkeep
+  547  ls -a parent/child/granchild
+  548  man mv
+  549  man mv
+  550  mv pokiemans pokemon
+  551  ls
+  552  man rm
+  553  rm lol.txt
+  554  man rm
+  555  ls
+  556  rm -r kill-me
+  557  ls
+  558  man cp
+  559  cp and-then.txt
+  560  man cp
+  561  cp and-then.txt no-and-then.txt
+  562  ls
+  563  cat and-then.txt no-and-then.txt
+  564  man history
+  565  history > command-history.txt
