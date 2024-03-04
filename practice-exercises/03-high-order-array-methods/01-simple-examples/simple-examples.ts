@@ -39,6 +39,14 @@ const valueFourElement = numbers.find((arrayValue) => {
  * some: Checks if at least one array element satisfies a condition.
  */
 
+const satisfies = numbers.some((value) => {
+  return value === 3;
+});
+
 /**
  * every: Checks if all array elements satisfy a condition.
  */
+
+const every = numbers.every((value) => {
+  return value;
+});
