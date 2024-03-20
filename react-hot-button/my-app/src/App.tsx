@@ -27,7 +27,8 @@ function App() {
     <HotButton
       label={'Hot Button ' + count}
       onHotButtonClick={handleClick}
-      color={color}></HotButton>
+      color={color}
+    />
   );
 }
 
