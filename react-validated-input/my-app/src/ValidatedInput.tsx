@@ -15,7 +15,11 @@ export function ValidatedInput() {
             type="password"
             className="form-control"
           />
-          <i className={'fas fa-' + (value.length < 8 ? 'times' : 'check')}></i>
+          <i
+            className={
+              'fas fa-' +
+              (value.length < 8 || !pattern.test(value) ? 'times' : 'check')
+            }></i>
           <p className="error">
             {!value
               ? 'A password is required.'
