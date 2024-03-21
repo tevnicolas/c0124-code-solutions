@@ -3,6 +3,7 @@ import './ValidateInput.css';
 
 export function ValidatedInput() {
   const [value, setValue] = useState('');
+  const pattern = /^(?=.*\d)(?=.*[A-Z])(?=.*[!@#$%^&*()]).*$/;
   return (
     <>
       <div className="mb-3">
@@ -20,6 +21,8 @@ export function ValidatedInput() {
               ? 'A password is required.'
               : value.length < 8
               ? 'Your password is too short.'
+              : !pattern.test(value)
+              ? 'Password must contain a digit, a capital, and a special character.'
               : ''}
           </p>
         </label>
