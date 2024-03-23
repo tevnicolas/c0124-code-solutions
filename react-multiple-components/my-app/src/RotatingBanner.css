@@ -6,6 +6,10 @@
   border: 3px solid;
 }
 
+.selected {
+  background-color: salmon;
+}
+
 .flexxer {
   display: flex;
   justify-content: center;

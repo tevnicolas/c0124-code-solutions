@@ -6,15 +6,31 @@ type RBProps = {
 };
 
 export function RotatingBanner({ items }: RBProps) {
-  const [index /*, setIndex*/] = useState(0);
+  const [index, setIndex] = useState(0);
   const numOfIndicators = items.length;
+
+  function handlePreviousClick(): void {
+    index ? setIndex((prev) => prev - 1) : setIndex(5);
+  }
+
+  function handleNextClick(): void {
+    index !== 5 ? setIndex((prev) => prev + 1) : setIndex(0);
+  }
+
+  function handleIndicatorClick(current: number): void {
+    setIndex(current);
+  }
 
   return (
     <>
       <Banner name={items[index]} />
-      <PreviousButton />
-      <Indicators number={numOfIndicators} />
-      <NextButton />
+      <PreviousButton handleClick={handlePreviousClick} />
+      <Indicators
+        amount={numOfIndicators}
+        current={index}
+        handleClick={handleIndicatorClick}
+      />
+      <NextButton handleClick={handleNextClick} />
     </>
   );
 }
@@ -31,11 +47,13 @@ function Banner({ name }: BProps) {
   );
 }
 
-// type PrevNextProps = {};
+type PrevNextProps = {
+  handleClick: () => void;
+};
 
-function PreviousButton() {
+function PreviousButton({ handleClick }: PrevNextProps) {
   return (
-    <div className="flexxer">
+    <div className="flexxer" onClick={handleClick}>
       <div className="box">
         <p>Prev</p>
       </div>
@@ -44,14 +62,19 @@ function PreviousButton() {
 }
 
 type IProps = {
-  number: number;
+  amount: number;
+  current: number;
+  handleClick: (current: number) => void;
 };
 
-function Indicators({ number }: IProps) {
+function Indicators({ amount, current, handleClick }: IProps) {
   const indicatorDivs = [];
-  for (let i = 0; i < number; i++) {
+  for (let i = 0; i < amount; i++) {
     indicatorDivs.push(
-      <div className="box" key={i}>
+      <div
+        className={i === current ? 'box selected' : 'box'}
+        key={i}
+        onClick={() => handleClick(i)}>
         <p>{i}</p>
       </div>
     );
@@ -59,9 +82,9 @@ function Indicators({ number }: IProps) {
   return <div className="flexxer">{indicatorDivs}</div>;
 }
 
-function NextButton() {
+function NextButton({ handleClick }: PrevNextProps) {
   return (
-    <div className="flexxer">
+    <div className="flexxer" onClick={handleClick}>
       <div className="box">
         <p>Next</p>
       </div>
