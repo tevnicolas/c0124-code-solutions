@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import './RotatingBanner.css';
 
 type RBProps = {
@@ -6,12 +6,12 @@ type RBProps = {
 };
 
 export function RotatingBanner({ items }: RBProps) {
-  // const [index, setIndex] = useState(0);
+  const [index /*, setIndex*/] = useState(0);
   const numOfIndicators = items.length;
 
   return (
     <>
-      <Banner name={items[0]} />
+      <Banner name={items[index]} />
       <PreviousButton />
       <Indicators number={numOfIndicators} />
       <NextButton />
