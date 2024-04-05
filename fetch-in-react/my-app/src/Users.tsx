@@ -28,10 +28,11 @@ export function Users() {
           throw new Error('Network response for loading Users was not OK.');
         }
         const result = await response.json();
-        setIsLoading(false);
         setUsers(result);
       } catch (error) {
         setError(error);
+      } finally {
+        setIsLoading(false);
       }
     }
     fetcher();

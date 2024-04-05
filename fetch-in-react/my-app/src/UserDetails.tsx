@@ -25,9 +25,10 @@ export function UserDetails({ userId, onCancel }: Props) {
         }
         const result = await response.json();
         setUser(result);
-        setIsLoading(false);
       } catch (error) {
         setError(error);
+      } finally {
+        setIsLoading(false);
       }
     }
     fetchy();
