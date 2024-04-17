@@ -12,8 +12,8 @@ export function authMiddleware(
   next: NextFunction
 ): void {
   /* your code here */
-  const auth = req.headers.authorization;
-  const token = auth && auth.split('Bearer ')[1];
+  const auth = req.get('Authorization');
+  const token = auth?.split('Bearer ')[1];
   if (!token) {
     throw new ClientError(401, 'authentication required');
   }
